@@ -28,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="45.12.345.678:9999" />
+        tools:text="45.12.345.678:7977" />
 
     <TextView
         android:id="@+id/peer_list_row_height"
@@ -39,7 +39,7 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/peer_list_row_ip"
-        tools:text="935826 blocks" />
+        tools:text="0 blocks" />
 
     <TextView
         android:id="@+id/peer_list_row_version"
@@ -51,7 +51,7 @@
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/peer_list_row_height"
-        tools:text="/Dash Core:0.12.3.2/\nprotocol: 70210" />
+        tools:text="/LifetionCoin Core:0.13.0/\nprotocol: 70208" />
 
     <TextView
         android:id="@+id/peer_list_row_ping"
@@ -63,6 +63,6 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/peer_list_row_version"
-        tools:text="123 ms" />
+        tools:text="1 ms" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
