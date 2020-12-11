@@ -63,40 +63,16 @@ public final class Constants {
 
     static {
         switch (BuildConfig.FLAVOR) {
+            case "beta":
             case "prod":
-            case "beta": {
-                DNS_SEED = new String[]{"dnsseed.dash.org", "dnsseed.dashdot.io"};
+            case "_testNet3": {
+                DNS_SEED = new String[] { "dnsseed.lifetioncoin.org" };
                 BIP44_PATH = DeterministicKeyChain.BIP44_ACCOUNT_ZERO_PATH;
                 NETWORK_PARAMETERS = MainNetParams.get();
                 IS_PROD_BUILD = true;
                 FILENAME_NETWORK_SUFFIX = "";
                 WALLET_NAME_CURRENCY_CODE = "dash";
                 break;
-            }
-            case "_testNet3": {
-                DNS_SEED = new String[]{"testnet-seed.dashdot.io", "95.183.51.146", "35.161.101.35", "54.91.130.170"};
-                BIP44_PATH = DeterministicKeyChain.BIP44_ACCOUNT_ZERO_PATH_TESTNET;
-                NETWORK_PARAMETERS = TestNet3Params.get();
-                IS_PROD_BUILD = false;
-                FILENAME_NETWORK_SUFFIX = "-testnet";
-                WALLET_NAME_CURRENCY_CODE = "tdash";
-                break;
-            }
-            case "devNet": {
-                DNS_SEED = new String[]{
-                        "devnet-maithai.thephez.com",
-                        "54.187.113.35", "54.200.201.200", "34.216.233.163",
-                        "34.221.188.185", "54.189.63.67", "52.40.117.135",
-                        "54.187.111.107", "34.212.68.164", "18.237.142.23",
-                        "54.202.73.177"
-                };
-                BIP44_PATH = DeterministicKeyChain.BIP44_ACCOUNT_ZERO_PATH_TESTNET;
-                NETWORK_PARAMETERS = DevNetParams.get("maithai", "yMtULrhoxd8vRZrsnFobWgRTidtjg2Rnjm", 20001, DNS_SEED);
-                IS_PROD_BUILD = false;
-                FILENAME_NETWORK_SUFFIX = "-devnet";
-                WALLET_NAME_CURRENCY_CODE = "tdash";
-                break;
-
             }
             default: {
                 throw new IllegalStateException("Unsupported flavor " + BuildConfig.FLAVOR);
